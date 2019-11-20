@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>D3 Graph Example</title>
+    <
 </head>
 
 <body>
@@ -54,11 +55,10 @@
         d3.select("svg")
             .append("g")
             .append("path")
+            .classed("line-graph", true)
             // ?
             .datum(numbers)
             .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
             .attr("d", d3.line()
                 .y(d => 200 - d * 5)
                 .x((d, i) => i * 300/20))
